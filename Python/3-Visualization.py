@@ -1,20 +1,28 @@
-#Assignment 9
-#Question 1: Use NumPy to edit csv and save as.npy file
-#Date: 10/22/2017
-#Jessica Johnson
+
+import matplotlib.pyplot as plt
+import numpy as np
 
 
+#Create histogram
+plt.hist(df.variable, bins=10)
+#Can drop NA values from histogram (or any other graph
+plt.hist(df.variable.drop().values, bins = 20
+#Take log value of variable
+plt.hist(np.log10(df.variable), bins = 20)
 
-def main():
-    import numpy as np
-    from numpy import genfromtxt
-
-    s=genfromtxt("Scores_all.csv", delimiter=",")
-    scores=s[1:]
-    scores[np.isnan(scores)] = 0
-    scores = scores.astype(int)    
-    np.save("scores",scores)
-  
-  
-      
-main()
+# Create Line Graph: set the linewidth (lw), color and transparency (alpha) of the line
+    df.plot(df.x, df.y, lw = 2, color = 'choose color', alpha = 1)
+    # Label the axes and provide a title
+    df.set_title(title)
+    df.set_xlabel(x_label)
+    df.set_ylabel(y_label)
+    
+# Create ScatterPlot: set the linewidth (lw), color and transparency (alpha) of the line  
+   df.scatter(df.x, df.y, s = 10, color = 'choose color', alpha = 1)
+    # Label the axes and provide a title
+    df.set_title(title)
+    df.set_xlabel(x_label)
+    df.set_ylabel(y_label)
+ 
+# Create BarPlot
+    df.bar(df.x, df.y, color = 'choose color', align = 'center')
