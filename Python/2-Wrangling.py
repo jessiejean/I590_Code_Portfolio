@@ -1,20 +1,21 @@
-#Assignment 9
-#Question 1: Use NumPy to edit csv and save as.npy file
-#Date: 10/22/2017
-#Jessica Johnson
+#Get basic information of dataset including: count, mean, std, min, 25%, 50%, 75%, max
+df.describe()
+
+#Group values together and show size or description of each group
+df.groupby(by =[‘class’, ‘doctor_name’]).size()
+df.groupby(by =[‘class’, ‘doctor_name’]).describe()
+
+#Get type and other info of a df
+df.info()
+
+#Deal with missing values - sum the total of missign values
+df.isna().sum()
+
+#Find number of unique values in each column
+df.nunique()
 
 
 
-def main():
-    import numpy as np
-    from numpy import genfromtxt
 
-    s=genfromtxt("Scores_all.csv", delimiter=",")
-    scores=s[1:]
-    scores[np.isnan(scores)] = 0
-    scores = scores.astype(int)    
-    np.save("scores",scores)
-  
-  
-      
-main()
+#Source: https://towardsdatascience.com/data-wrangling-with-pandas-5b0be151df4e
+#Source: https://www.earthdatascience.org/courses/earth-analytics-bootcamp/data-wrangling/data-wrangling-pandas/
