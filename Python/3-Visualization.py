@@ -46,3 +46,6 @@ plt.hist(np.log10(df.variable), bins = 20)
     plt.show()
          
    #Source: https://machinelearningmastery.com/visualize-machine-learning-data-python-pandas/
+   #Source: https://seaborn.pydata.org/tutorial/categorical.html
+   #Source: https://towardsdatascience.com/visualize-world-trends-using-seaborn-in-python-2e563e7d35da
+         
