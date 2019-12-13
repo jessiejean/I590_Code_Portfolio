@@ -32,6 +32,14 @@ x = [1, 2, 3]
 y = [4, 5, 6]
 pd.concat([x, y])
 
+#Create numerical value from categorical
+lb_make = LabelEncoder()
+df['region_numeric'] = lb_make.fit_transform(df['region'])
+df.head()
+
+#group by () and get unique [] values
+df.groupby('category2')['model'].nunique()
+
 
 #Source: https://towardsdatascience.com/data-wrangling-with-pandas-5b0be151df4e
 #Source: https://www.earthdatascience.org/courses/earth-analytics-bootcamp/data-wrangling/data-wrangling-pandas/
